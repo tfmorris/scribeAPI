@@ -1,5 +1,5 @@
-# Record Number
-<p>The record number can generally be found in the upper right-hand corner of the record. Don't worry if you can't find this field on the page; many mortgages do not have a record number.</p>
+# Number of marriage license
+<p>These example images need to be updated</p>
 <div id="accordion-help-modal">
   <h3>Sample Image One</h3>
   <div class="modal-field-guide" >

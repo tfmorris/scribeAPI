@@ -1,6 +1,6 @@
-# Mortgager Name
+# Surname
 
-<p>The mortgager tends to be a single person or organization's name. If multiple names are provided, enter them all separated by semi-colons. (E.g. "Mary Smith; John O'Meallia")</p>
+<p>Bride or groom's surname. These example images need to be updated</p>
 <div id="accordion-help-modal">
   <h3>Sample One</h3>
   <div class="modal-field-guide" >
