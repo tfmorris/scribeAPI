@@ -1,0 +1,58 @@
+{
+  "title": "NYC Marriage Licenses",
+  "short_title": "NYC Marriages",
+  "summary": "Join us in transcribing registers of marriage license applications from New York City 1909-1928",
+  "background": "/images/background.jpg",
+  "admin_email": "tfmorris@gmail.com",
+  "logo": "/images/logo.png",
+  "favicon": "/images/favicon.ico",
+  "privacy_policy": "http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy",
+  "terms_map": {
+    "group": "collection",
+    "subject set": "page",
+    "subject": "page",
+    "mark": "region"
+  },
+  "team_emails": [
+    "tfmorris@gmail.com"
+  ],
+  "team": [
+    {
+      "name": "Tom Morris",
+      "role": "Code Wrangler",
+      "organization": "Independent"
+    }
+  ],
+  "organizations": [
+    {
+      "title": "Reclaim the Records",
+      "description": "A not-for-profit group of genealogists, historians, researchers, and open government advocates who are filing Freedom of Information requests to get public data released back into the public domain",
+      "url":"https://www.reclaimtherecords.org/",
+      "logo": "https://www.reclaimtherecords.org/wp-content/uploads/2015/09/rtr_icon.jpg"
+    },
+    {
+      "title": "Internet Archive",
+      "description": "Internet Archive is a non-profit library of millions of free books, movies, software, music, and more",
+      "url":"https://archive.org/nycmarriageindex",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Internet_Archive_logo_and_wordmark.svg/200px-Internet_Archive_logo_and_wordmark.svg.png"
+    }
+  ],
+
+  "analytics": {
+    "google_analytics_client_id": "UA-69673163-1"
+  },
+
+  "forum": {
+    "type": "discourse",
+    "base_url": "http://forum.emigrantcity.nypl.org"
+  },
+
+  "menus": {
+    "main": [
+      {"label": "Intro", "page": "intro"},
+      {"label": "Data", "page": "data"},
+      {"label": "About", "page": "about"}
+    ],
+    "footer": []
+  }
+}
