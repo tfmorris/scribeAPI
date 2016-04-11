@@ -11,6 +11,56 @@
 
   "tasks": {
 
+    "em_transcribed_surname": {
+      "instruction": "Choose the best transcription or enter your own!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": { "file": "v_text" },
+      "generates_subject_type": "consensus_surname"
+    },
+
+    "em_transcribed_given_name": {
+      "instruction": "Choose the best transcription or enter your own!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": { "file": "v_text" },
+      "generates_subject_type": "consensus_given_name"
+    },
+
+    "em_transcribed_volume": {
+      "instruction": "Choose the best transcription or enter your own!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": { "file": "v_text" },
+      "generates_subject_type": "consensus_volume"
+    },
+
+    "em_transcribed_page": {
+      "instruction": "Choose the best transcription or enter your own!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": { "file": "v_text" },
+      "generates_subject_type": "consensus_page"
+    },
+
+    "em_transcribed_number": {
+      "instruction": "Choose the best transcription or enter your own!",
+      "tool": "verifyTool",
+      "tool_config": {
+        "displays_transcribe_button": true
+      },
+      "help": { "file": "v_text" },
+      "generates_subject_type": "consensus_number"
+    },
+
     "em_transcribed_date": {
       "instruction": "Choose the best transcription or enter your own!",
       "tool": "verifyTool",
@@ -19,96 +69,6 @@
       },
       "help": { "file": "v_date" },
       "generates_subject_type": "consensus_date"
-    },
-
-    "em_transcribed_record_number": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_text" },
-      "generates_subject_type": "consensus_record_number"
-    },
-
-    "em_transcribed_mortgager": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_text" },
-      "generates_subject_type": "consensus_mortgager"
-    },
-
-    "em_transcribed_address": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_text" },
-      "generates_subject_type": "consensus_address"
-    },
-
-    "em_transcribed_amount_loaned": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_currency" },
-      "generates_subject_type": "consensus_amount_loaned"
-    },
-
-    "em_transcribed_valuation_date": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_date" },
-      "generates_subject_type": "consensus_valuation_date"
-    },
-
-    "em_transcribed_valuation_itemized": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_currency" },
-      "generates_subject_type": "consensus_valuation_itemized"
-    },
-
-    "em_transcribed_valuation_total": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_currency" },
-      "generates_subject_type": "consensus_valuation_total"
-    },
-
-    "em_transcribed_survey": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_text" },
-      "generates_subject_type": "consensus_survey"
-    },
-
-    "em_transcribed_stories_materials": {
-      "instruction": "Choose the best transcription or enter your own!",
-      "tool": "verifyTool",
-      "tool_config": {
-        "displays_transcribe_button": true
-      },
-      "help": { "file": "v_text" },
-      "generates_subject_type": "consensus_stories_materials"
     }
   }
 }

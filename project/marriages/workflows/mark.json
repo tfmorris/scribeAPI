@@ -18,13 +18,12 @@
       "tool_config" : {
         "displays_transcribe_button": false,
         "options": [
-          {"type": "rectangleTool", "label": "Record Date", "color": "red", "generates_subject_type": "em_record_date", "help": {"file": "m_record_date"}},
-          {"type": "rectangleTool", "label": "Record Number", "color": "blue", "generates_subject_type": "em_record_number", "help":  {"file": "m_record_number"}},
-          {"type": "rectangleTool", "label": "Mortgager Name", "color": "darkorange", "generates_subject_type": "em_record_mortgager", "help": {"file": "m_record_mortgager"}},
-          {"type": "rectangleTool", "label": "Street Address", "color": "magenta", "generates_subject_type": "em_record_street_address", "help": {"file": "m_record_street_address"}},
-          {"type": "rectangleTool", "label": "Amount Loaned", "color": "teal", "generates_subject_type": "em_record_amount_loaned", "help": {"file": "m_record_amount_loaned"}},
-          {"type": "rectangleTool", "label": "Valuation", "color": "sienna", "generates_subject_type": "em_record_valuation", "help": {"file": "m_record_valuation"}},
-          {"type": "rectangleTool", "label": "Dimension & Description", "color": "purple", "generates_subject_type": "em_record_survey", "help": {"file": "m_record_survey"}}
+          {"type": "rectangleTool", "label": "Surname", "color": "darkorange", "generates_subject_type": "em_surname", "help": {"file": "m_surname"}},
+          {"type": "rectangleTool", "label": "Given Name", "color": "yellow", "generates_subject_type": "em_given_name", "help": {"file": "m_given_name"}},
+          {"type": "rectangleTool", "label": "Volume", "color": "blue", "generates_subject_type": "em_volume", "help":  {"file": "m_volume"}},
+          {"type": "rectangleTool", "label": "Page", "color": "green", "generates_subject_type": "em_page", "help":  {"file": "m_page"}},
+          {"type": "rectangleTool", "label": "Number", "color": "blue", "generates_subject_type": "em_number", "help":  {"file": "m_number"}},
+          {"type": "rectangleTool", "label": "Date", "color": "red", "generates_subject_type": "em_date", "help": {"file": "m_date"}}
         ]
       },
       "next_task": null
