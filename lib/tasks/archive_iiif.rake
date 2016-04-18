@@ -12,14 +12,15 @@ namespace :project do
   end
   
   def service_to_full_url(service_id)
-    "#{service_id}/full/full/0/default.jpg"
+    "#{service_id}/#{IiifParams::SUBJECT_OFFSET}/#{IiifParams::SUBJECT_RESOLUTION}/0/default.jpg"
   end
   
   def service_to_thumb_url(service_id)
-    "#{service_id}/full/100,100/0/default.jpg"
+    "#{service_id}/full/#{IiifParams::THUMBNAIL_RESOLUTION}/0/default.jpg"
   end
   
   def process_canvas(canvas, index, archive_id, csv)
+    # TODO: This should split left & right pages into separate subjects (probably crop too)
     canvas_id = canvas['@id']
     canvas_label =  canvas.label
 
@@ -42,9 +43,12 @@ namespace :project do
     # capture_uuid,
     row << "#{archive_id}-#{index}"
     # page_uri,
-    row << "http://digitalcollections.nypl.org/items/e38ae1d0-00b1-0133-2ced-58d385a7bbd0"
+    # TODO: We want something better than an URI with fragment here
+    row << "https://archive.org/details/#{archive_id}#page/n#{index}"
      # book_uri,
-    row << "http://digitalcollections.nypl.org/items/df712aa0-00b1-0133-fbd7-58d385a7bbd0"
+    row << "https://archive.org/details/#{archive_id}"
+    # source_rotated
+    0.00
     # width,
     row << 1000
     # height,
