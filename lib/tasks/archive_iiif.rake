@@ -48,7 +48,7 @@ namespace :project do
      # book_uri,
     row << "https://archive.org/details/#{archive_id}"
     # source_rotated
-    0.00
+    row << 0.00
     # width,
     row << 1000
     # height,
