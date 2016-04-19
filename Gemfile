@@ -14,12 +14,11 @@ gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem 'omniauth-zooniverse', '~> 0.0.3'
 
-gem 'mongoid', '~> 4.0.2'
+gem 'mongoid', '~> 5.1'
 gem 'active_model_serializers'
 gem 'mongoid-serializer'
 gem 'rack-cors', :require => 'rack/cors'
 gem "bson"
-gem "moped"
 gem 'sprockets-coffee-react'
 gem 'stylus', '~> 1.0.1'
 gem 'browserify-rails', '~> 0.9.1'
@@ -32,7 +31,7 @@ gem 'fastimage', '1.7.0'
 gem 'actionpack-action_caching'
 
 gem 'newrelic_rpm'
-gem 'newrelic_moped'
+# TODO add newrelic coverage for Mongo?
 
 gem 'puma', '~> 2.14.0'
 
@@ -64,5 +63,5 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
   gem 'factory_girl'
-  gem 'mongoid-rspec', '>= 1.6.0', :github=>"mongoid-rspec/mongoid-rspec"
+  gem 'mongoid-rspec', '>= 3.0.0', :github=>"mongoid-rspec/mongoid-rspec"
 end
