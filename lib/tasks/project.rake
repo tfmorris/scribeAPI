@@ -345,7 +345,7 @@ namespace :project do
     # Create a bunch of project-specific indexes:
     project = Project.current
 
-    SubjectSet.collection.dropIndexes
+    SubjectSet.remove_indexes
 
     # Create workflow counts indexes:
     project.workflows.each do |w|
