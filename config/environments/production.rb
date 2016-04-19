@@ -95,6 +95,9 @@ API::Application.configure do
   # Enable the logstasher logs for the current environment
   config.logstasher.enabled = true
 
+  # Mongo default logger level is DEBUG (!), make it less verbose
+  Mongo::Logger.logger.level = Logger::WARN
+
   # React:
   config.react.variant = :production
   config.react.addons = true
