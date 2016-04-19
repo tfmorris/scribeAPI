@@ -9,7 +9,7 @@ production:
     # (default: true)
     raise_not_found_error: false
 
-  sessions:
+  clients:
     default:
 
       # The standard MongoDB connection URI allows for easy replica set
@@ -54,15 +54,18 @@ production:
         refresh_interval: 10
 
 development:
-  # Configure available database sessions. (required)
-  sessions:
-    # Defines the default session. (required)
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
     default:
+      # TODO: use URI like below instead of database & hosts for remote DB
+      # uri: <%= ENV['MONGOLAB_URI'] %>
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       database: <%= ENV['MONGO_DB'].blank? ? 'scribe_api_development' : ENV['MONGO_DB'] %>
-      # Provides the hosts the default session can connect to. Must be an array
+      # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
+      # Comment out two lines below to use URI
       hosts:
         - localhost:27017
       options:
@@ -115,7 +118,7 @@ development:
     # use_utc: false
 
 test:
-  sessions:
+  clients:
     default:
       database: api_test
       hosts:
