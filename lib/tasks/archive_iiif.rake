@@ -7,19 +7,23 @@ namespace :project do
   
   module IiifParams 
     THUMBNAIL_RESOLUTION='100,100'
+    SUBJECT_WIDTH=1500
     SUBJECT_RESOLUTION='1500,'
-    SUBJECT_OFFSET='full'
+    # Origin and size for left & right page images
+    # these will be computed algorithmicly eventually, but hardcode examples for now
+    SUBJECT_REGION_LEFT='1100,400,2500,3900'
+    SUBJECT_REGION_RIGHT='3500,400,2500,3900'
   end
   
-  def service_to_full_url(service_id)
-    "#{service_id}/#{IiifParams::SUBJECT_OFFSET}/#{IiifParams::SUBJECT_RESOLUTION}/0/default.jpg"
+  def service_to_full_url(service_id, subject_region)
+    "#{service_id}/#{subject_region}/#{IiifParams::SUBJECT_RESOLUTION}/0/default.jpg"
   end
   
-  def service_to_thumb_url(service_id)
-    "#{service_id}/full/#{IiifParams::THUMBNAIL_RESOLUTION}/0/default.jpg"
+  def service_to_thumb_url(service_id, subject_region)
+    "#{service_id}/#{subject_region}/#{IiifParams::THUMBNAIL_RESOLUTION}/0/default.jpg"
   end
   
-  def process_canvas(canvas, index, archive_id, csv)
+  def process_canvas(canvas, index, archive_id, csv, subject_region)
     # TODO: This should split left & right pages into separate subjects (probably crop too)
     canvas_id = canvas['@id']
     canvas_label =  canvas.label
@@ -37,9 +41,9 @@ namespace :project do
     # order,
     row << index
     # file_path,
-    row << service_to_full_url(service_id)
+    row << service_to_full_url(service_id, subject_region)
     # thumbnail,
-    row << service_to_thumb_url(service_id)
+    row << service_to_thumb_url(service_id, subject_region)
     # capture_uuid,
     row << "#{archive_id}-#{index}"
     # page_uri,
@@ -50,7 +54,7 @@ namespace :project do
     # source_rotated
     row << 0.00
     # width,
-    row << 1000
+    row << IiifParams::SUBJECT_WIDTH
     # height,
     row << 1000
     # source_x,
@@ -100,13 +104,15 @@ namespace :project do
         'source_h'
       ]
       service.sequences.first.canvases.each_with_index do |canvas,i|
-        process_canvas(canvas, i, archive_id, csv)
-      end      
+        # Split images into separate left and right pages
+        process_canvas(canvas, i * 2, archive_id, csv, IiifParams::SUBJECT_REGION_LEFT)
+        process_canvas(canvas, i * 2 + 1, archive_id, csv, IiifParams::SUBJECT_REGION_RIGHT)
+      end
       
       print "Add the following line to groups.csv:\n"
       # key,name,description,cover_image_url,external_url,retire_count
       group_sample_canvas = service.sequences.first.canvases[(service.sequences.first.canvases.length / 3).to_i]
-      group_thumbnail = service_to_thumb_url(group_sample_canvas.images.first['resource']['service']['@id'])
+      group_thumbnail = service_to_thumb_url(group_sample_canvas.images.first['resource']['service']['@id'], IiifParams::SUBJECT_REGION_LEFT)
       print [group_key, service.label,service.label,group_thumbnail,"http://archive.org/stream/#{archive_id}",2].to_csv
     end    
   
